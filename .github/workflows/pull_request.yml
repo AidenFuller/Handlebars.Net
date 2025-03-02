@@ -3,6 +3,8 @@ name: Pull Request
 on:
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
+    branches: ['*']
 
 jobs:
   build:
@@ -138,7 +140,7 @@ jobs:
           alert-comment-cc-users: '@zjklee'
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Benchmark
           path: source/Handlebars.Benchmark/BenchmarkDotNet.Artifacts/results/
