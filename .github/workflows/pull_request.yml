@@ -140,7 +140,7 @@ jobs:
           alert-comment-cc-users: '@zjklee'
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Benchmark
           path: source/Handlebars.Benchmark/BenchmarkDotNet.Artifacts/results/
